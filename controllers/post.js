@@ -138,4 +138,4 @@ const userMemo = async(req,res)=> {
     }
 }
 
-module.exports = {userData,alldataserch,daydataserch,dataDelete,dataModify,namedataserch, onedataserch,userMemo}
+module.exports = {userData,alldatasearch,daydatasearch,dataDelete,dataModify,namedatasearch, onedatasearch,userMemo}
