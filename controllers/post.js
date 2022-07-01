@@ -37,7 +37,7 @@ const userData = async(req,res)=> {
 //유저 전체데이터 가져오기
 //썬더클라이언트 확인완료
 //토큰값있으면 데이터 가져올수있음
-const alldataserch = async(req,res)=> {
+const alldatasearch = async(req,res)=> {
     try {
         const alldata = await Post.findAll()
         console.log(alldata)
@@ -49,7 +49,7 @@ const alldataserch = async(req,res)=> {
 }
 
 //유저 전체데이터 가져오기
-const onedataserch = async(req,res)=> {
+const onedatasearch = async(req,res)=> {
     const {userId} = req.query
     try {
         const onedata = await Post.findOne()
@@ -62,7 +62,7 @@ const onedataserch = async(req,res)=> {
 
 //유저 이름으로 데이터 조회하기
 //썬더클라이언트 확인완료
-const namedataserch = async(req,res)=> {
+const namedatasearch = async(req,res)=> {
     const {username} = req.query
     try {
         const onedata = await Post.findOne({where:{username}})
@@ -76,7 +76,7 @@ const namedataserch = async(req,res)=> {
 
 //유저 요일데이터 가져오기
 //썬더클라이언트 확인완료
-const daydataserch = async (req,res)=> {
+const daydatasearch = async (req,res)=> {
     const {day1,day2} = req.query
     try {
         const daydata = await Post.findAll({where:{day1}})
